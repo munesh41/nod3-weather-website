@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit',(e)=>{
       } else{
           myweather= JSON.stringify(data.weather)
         messageOne.textContent=data.location
-        messageTwo.textContent='The Weather for your location is ' +myweather 
+        messageTwo.textContent='The Weather for your location is /n ' +myweather 
       }
       
    }) 
