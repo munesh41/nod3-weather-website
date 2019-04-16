@@ -7,13 +7,13 @@ const forecast = (latitude,longitude,callback)=>{
         }else if (body.error){
             callback('Please enter a valid coodinate')
         }else{
-            callback(undefined,{
-                latitude:body.latitude,
-                longitude:body.longitude,
-                timezone:body.timezone,
-                weather:body.currently.summary,
-                temp:body.currently.temperature
-            })
+            callback(undefined,callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+                // latitude:body.latitude,
+                // longitude:body.longitude,
+                // timezone:body.timezone,
+                // weather:body.currently.summary,
+                // temp:body.currently.temperature
+            )
         }
     })
 }
